@@ -1,1 +1,1 @@
-class_name Enums extends Node
+class_name InventoryEnums extends Node
