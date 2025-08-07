@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0mqmjfp7rxy5"]
+
+[ext_resource type="Script" uid="uid://c7clwjrnk5q2a" path="res://addons/generic_inventory/scripts/main_panel.gd" id="1_y3a01"]
+
+[node name="Inventory Menu" type="ScrollContainer" node_paths=PackedStringArray("_default_focus_item")]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+follow_focus = true
+draw_focus_border = true
+script = ExtResource("1_y3a01")
+_default_focus_item = NodePath("CenterContainer/PanelContainer")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+text = "Hello"
